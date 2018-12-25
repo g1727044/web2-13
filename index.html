@@ -1,27 +1,24 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <title>はじめてのmBaaS</title>
   </head>
-  <body>
-    <script type="text/javascript" src="ncmb.min.js" charset="utf-8"></script>
-    <script>
-      // mobile backendアプリとの連携
-      var ncmb = new NCMB("04f7eab54e719cbc9944901eca8ecb41df7ee87d803036c467939dbac77a76b5","faec8927a8d60f38eeceed8cfd299820fafb20cc2e83d4c1f21df664450cfe30");
-    
-      // クラスのTestClassを作成
-      var TestClass = ncmb.DataStore("TestClass");
-      // データストアへの登録
-      var testClass = new TestClass();
-      testClass.set("message","Hello, NCMB!");
-      testClass.save();
-        .then(function(){
-          // 保存に成功した場合の処理
-        })
-        .catch(function(err){
-          // 保存に失敗したときの処理
-        });
-    </script>
-  </body>
+  <script type="text/javascript" src="ncmb.min.js" charset="utf-8"></script>
+  <script>
+    // mobile backendアプリとの連携
+    var ncmb = new NCMB("04f7eab54e719cbc9944901eca8ecb41df7ee87d803036c467939dbac77a76b5","faec8927a8d60f38eeceed8cfd299820fafb20cc2e83d4c1f21df664450cfe30");
+  
+    // クラスのTestClassを作成
+    var TestClass = ncmb.DataStore("TestClass");
+    // データストアへの登録
+    var testClass = new TestClass();
+    testClass.set("message","Hello, NCMB!");
+    testClass.save();
+      .then(function(){
+        // 保存に成功した場合の処理
+      })
+      .catch(function(err){
+        // 保存に失敗したときの処理
+      });
+  </script>
 </html>
